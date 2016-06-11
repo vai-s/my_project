@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [AndroidSuite]">
+  <test name="VerifyZeroStateBudget(failed)">
+    <classes>
+      <class name="com.qkn.automation.test.android.VerifyGettingStarted">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qkn.automation.test.android.VerifyGettingStarted -->
+      <class name="com.qkn.automation.test.android.EndUserLicenseVerification">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qkn.automation.test.android.EndUserLicenseVerification -->
+      <class name="com.qkn.automation.test.android.LoginVerification">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qkn.automation.test.android.LoginVerification -->
+      <class name="com.qkn.automation.test.android.VerifyZeroStateBudget">
+        <methods>
+          <include name="testZeroStateBudget"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qkn.automation.test.android.VerifyZeroStateBudget -->
+      <class name="com.qkn.automation.test.android.TrustLogoVerification">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qkn.automation.test.android.TrustLogoVerification -->
+      <class name="com.qkn.automation.test.android.VerifyBudgetMonth">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qkn.automation.test.android.VerifyBudgetMonth -->
+      <class name="com.qkn.automation.test.android.VerifyForgotPasswordLink">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qkn.automation.test.android.VerifyForgotPasswordLink -->
+    </classes>
+  </test> <!-- VerifyZeroStateBudget(failed) -->
+</suite> <!-- Failed suite [AndroidSuite] -->

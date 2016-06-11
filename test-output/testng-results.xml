@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="164063" started-at="2016-06-05T19:40:34Z" finished-at="2016-06-05T19:43:18Z">
+    <groups>
+      <group name="android">
+        <method signature="VerifyTransaction.testAddManualTransaction()[pri:1, instance:com.qkn.automation.test.android.VerifyTransaction@3cbbc1e0]" name="testAddManualTransaction" class="com.qkn.automation.test.android.VerifyTransaction"/>
+      </group> <!-- android -->
+    </groups>
+    <test name="Default test" duration-ms="164063" started-at="2016-06-05T19:40:34Z" finished-at="2016-06-05T19:43:18Z">
+      <class name="com.qkn.automation.test.android.VerifyTransaction">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qkn.automation.test.android.VerifyTransaction@3cbbc1e0]" name="setup" is-config="true" duration-ms="14016" started-at="2016-06-06T01:10:34Z" finished-at="2016-06-06T01:10:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testAddManualTransaction()[pri:1, instance:com.qkn.automation.test.android.VerifyTransaction@3cbbc1e0]" name="testAddManualTransaction" duration-ms="147005" started-at="2016-06-06T01:10:48Z" finished-at="2016-06-06T01:13:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddManualTransaction -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qkn.automation.test.android.VerifyTransaction@3cbbc1e0]" name="tearDown" is-config="true" duration-ms="3026" started-at="2016-06-06T01:13:15Z" finished-at="2016-06-06T01:13:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qkn.automation.test.android.VerifyTransaction -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

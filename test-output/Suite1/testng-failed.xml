@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <test name="Firsttest1(failed)">
+    <classes>
+      <class name="com.qkn.automation.test.SmokeTestIOS">
+        <methods>
+          <include name="testAddManualTransactionWithoutAttachment"/>
+          <include name="testAddManualTransWithAttachment"/>
+          <include name="testEndUserLicenceIOS"/>
+          <include name="setup"/>
+          <include name="testTrusteLogoios"/>
+        </methods>
+      </class> <!-- com.qkn.automation.test.SmokeTestIOS -->
+    </classes>
+  </test> <!-- Firsttest1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

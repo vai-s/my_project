@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="AndroidSuite" verbose="1" >
+  <test name="VerifyLogin" >
+    <classes>
+       <class name="com.qkn.automation.test.android.LoginVerification" />
+    </classes>
+  </test>
+ <test name="EndUserLicenseVerification">
+ 	<classes>
+ 	   <class name="com.qkn.automation.test.android.EndUserLicenseVerification"/>
+ 	</classes>
+ </test>	
+<test name="TrustLogoVerification">
+ 	<classes>
+ 	   <class name="com.qkn.automation.test.android.TrustLogoVerification"/>
+ 	</classes>
+ </test>
+ <test name="VerifyBudgetMonth">
+ 	<classes>
+ 	   <class name="com.qkn.automation.test.android.VerifyBudgetMonth"/>
+ 	</classes>
+ </test>
+  <test name="VerifyGettingStarted">
+ 	<classes>
+ 	   <class name="com.qkn.automation.test.android.VerifyGettingStarted"/>
+ 	</classes>
+ </test>
+   <test name="VerifyForgotPasswordLink">
+ 	<classes>
+ 	   <class name="com.qkn.automation.test.android.VerifyForgotPasswordLink"/>
+ 	</classes>
+ </test>
+   <test name="VerifyZeroStateBudget">
+ 	<classes>
+ 	   <class name="com.qkn.automation.test.android.VerifyZeroStateBudget"/>
+ 	</classes>
+ </test>
+</suite>
