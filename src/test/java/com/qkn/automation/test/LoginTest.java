@@ -44,7 +44,7 @@ public class LoginTest extends BaseTest {
 			logFailure(e.getMessage());
 		}
 	}*/
-	 
+	 //Added a line to check
 	/*
 	//Passed
 		//Verify the Truste logo for IOS 
