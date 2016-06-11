@@ -36,4 +36,29 @@
  	   <class name="com.qkn.automation.test.android.VerifyZeroStateBudget"/>
  	</classes>
  </test>
+   <test name="LoginVerification">
+ 	<classes>
+ 	   <class name="com.qkn.automation.test.android.LoginVerification"/>
+ 	</classes>
+ </test>
+   <test name="VerifyAccountsPage">
+ 	<classes>
+ 	   <class name="com.qkn.automation.test.android.VerifyAccountsPage"/>
+ 	</classes>
+ </test>
+   <test name="VerifyOverviewPage">
+ 	<classes>
+ 	   <class name="com.qkn.automation.test.android.VerifyOverviewPage"/>
+ 	</classes>
+ </test>
+  <test name="VerifyPasscode">
+ 	<classes>
+ 	   <class name="com.qkn.automation.test.android.VerifyPasscode"/>
+ 	</classes>
+ </test>
+    <test name="VerifyTransaction">
+ 	<classes>
+ 	   <class name="com.qkn.automation.test.android.VerifyTransaction"/>
+ 	</classes>
+ </test>
 </suite>
