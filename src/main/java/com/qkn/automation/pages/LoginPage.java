@@ -4,8 +4,12 @@ import io.appium.java_client.AndroidKeyCode;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.IOSKeyCode;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -224,14 +228,14 @@ public  class LoginPage extends Page{
 					By.id(pageprops.getProperty("LOGIN_USERNAME"))).sendKeys(
 							email);
 			pageDriver.findElement(
-					By.id(pageprops.getProperty("LOGIN_PWD"))).sendKeys(
+					By.xpath(pageprops.getProperty("LOGIN_PWD2"))).sendKeys(
 							Keys.CONTROL + "a");
 			pageDriver.findElement(
-					By.id(pageprops.getProperty("LOGIN_PWD"))).sendKeys(
+					By.xpath(pageprops.getProperty("LOGIN_PWD2"))).sendKeys(
 							Keys.DELETE);
 			//	Thread.sleep(3000);
 			System.out.println("Before sendkeys for password");
-			pageDriver.findElement(By.id(pageprops.getProperty("LOGIN_PWD"))).sendKeys(password);
+			pageDriver.findElement(By.xpath(pageprops.getProperty("LOGIN_PWD2"))).sendKeys(password);
 //			Thread.sleep(5000);
 
 			//Require this to run on local to hide the keyboard not required on sauce labs .
@@ -605,5 +609,52 @@ public  class LoginPage extends Page{
 
 
 	}
+
+//added by vaishnavi
+
+public void loginWithValidCredentialsForAndroidQKN2(String email, String password)
+		throws Exception {
+	try{
+		WebDriverWait wait = new WebDriverWait(pageDriver, 30);
+		findElementByXpathAndClick(pageDriver, pageprops.getProperty("SINGUP_BUTTON_LOGINPAGE"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By
+				.id(pageprops
+						.getProperty("LOGIN_USERNAME"))));
+		pageDriver.findElement(
+				By.id(pageprops.getProperty("LOGIN_USERNAME"))).sendKeys(
+						Keys.CONTROL + "a");
+		pageDriver.findElement(
+				By.id(pageprops.getProperty("LOGIN_USERNAME"))).sendKeys(
+						Keys.DELETE);
+		System.out.println("Before send keys for username");
+		pageDriver.findElement(
+				By.id(pageprops.getProperty("LOGIN_USERNAME"))).sendKeys(
+						email);
+		pageDriver.findElement(
+				By.id(pageprops.getProperty("LOGIN_PWD"))).sendKeys(
+						Keys.CONTROL + "a");
+		pageDriver.findElement(
+				By.id(pageprops.getProperty("LOGIN_PWD"))).sendKeys(
+						Keys.DELETE);
+		System.out.println("Before sendkeys for password");
+		pageDriver.findElement(By.id(pageprops.getProperty("LOGIN_PWD"))).sendKeys(password);
+		findElementByXpathAndClick(pageDriver, pageprops.getProperty("SIGNIN_BTN"));
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pageprops.getProperty("SIGNINOK_BTN"))));
+		findElementByXpathAndClick(pageDriver, pageprops.getProperty("SIGNINOK_BTN"));
+		QuickenLogger.log(Level.INFO, "Login successfull with "+email+" as username and "+password+" as password");
+		
+
+		Thread.sleep(TestConstants.MINSLEEPTIME);
+		
+	}
+
+	//added 
+	catch(Exception e){
+		MintLogger.log(Level.INFO,"Unable to Sign in ");
+		e.printStackTrace();
+	}
+}
+
 
 }

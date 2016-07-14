@@ -1,9 +1,13 @@
 package com.qkn.automation.pages;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 import java.util.logging.Level;
 
 import org.openqa.selenium.By;
@@ -285,4 +289,5 @@ public class TransactionPage extends Page{
 		}
 
 	}
-}
+
+	}

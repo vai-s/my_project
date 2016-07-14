@@ -33,13 +33,13 @@ public class AccountsPage extends Page{
 	
 	
 	public void navigateToAllAccounts() throws Exception{
-		WebDriverWait wait = new WebDriverWait(pageDriver, 180);
-		  wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(pageprops.getProperty("ALL_ACCOUNTS"))));
-		   pageDriver.findElement(By.name(pageprops.getProperty("ALL_ACCOUNTS"))).click();
-	
-		/*//works with quicken with changes to use tagname   accounts page
+//		WebDriverWait wait = new WebDriverWait(pageDriver, 180);
+//		  wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(pageprops.getProperty("ALL_ACCOUNTS"))));
+//		   pageDriver.findElement(By.name(pageprops.getProperty("ALL_ACCOUNTS"))).click();
+//	
+		//works with quicken with changes to use tagname   accounts page
 			Thread.sleep(3000);
-			FindElementByTagNameAndClick(pageDriver,pageprops.getProperty("ALL_ACCOUNTS"));*/
+			findElementByXpathAndClick(pageDriver,pageprops.getProperty("ALL_ACCOUNTS2"));
 	}
 	
 	

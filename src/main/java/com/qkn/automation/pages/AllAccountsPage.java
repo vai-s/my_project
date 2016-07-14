@@ -64,4 +64,23 @@ public class AllAccountsPage extends Page{
 		FindElementByTagNameAndClick(pageDriver, pageprops.getProperty("ACCOUNTS_BACK_BUTTON"));
 	}
 	
+	//added by vaishnavi
+	public void navigateToFirstTXN_1() throws Exception{
+		Thread.sleep(3000);
+		 // CheckToggleText();
+		if (pageDriver.getPageSource().contains("Tap to toggle balance"))
+			
+		{
+			 pageDriver.findElement(By.xpath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).click();
+			 pageDriver.findElement(By.xpath(pageprops.getProperty("ALL_ACCOUNTS_FIRST_TXN"))).click();
+		}
+		else
+			{
+		  Thread.sleep(3000);
+	     // FindElementByTagNameAndClick(pageDriver, pageprops.getProperty("CD_FIRST_TXN"));
+		  pageDriver.findElement(By.xpath(pageprops.getProperty("ALL_ACCOUNTS_FIRST_TXN"))).click();
+		}
+	}
+	
+	
 }

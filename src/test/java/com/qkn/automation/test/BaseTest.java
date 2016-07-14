@@ -123,23 +123,23 @@ public class BaseTest {
 				DesiredCapabilities capabilities = new DesiredCapabilities();
 
 				//to run on local
-/*
-				File app=new File("/Users/asutrave/Desktop/Quicken32.apk");
+
+				File app=new File("/Users/vs/Downloads/Quicken32.apk");
 				capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-				capabilities.setCapability("deviceName", "Nexus_S23");
+				capabilities.setCapability("deviceName", "Nexus_6_API_21");
 				//capabilities.setCapability("deviceName", "Galaxy S6");
-				//	capabilities.setCapability("platformVersion", "5.1.1");
+				capabilities.setCapability("platformVersion", "5.0");
 				capabilities.setCapability("platformName", "android");
-				capabilities.setCapability("device ID", "emulator-5554");
+				capabilities.setCapability("device ID", "emulator-5556");
 				capabilities.setCapability("app",app.getAbsolutePath());
 				capabilities.setCapability("appPackage","com.quicken.qm2014");//added by ashwini
 				//	capabilities.setCapability("app-wait-activity","com.intuit.qm2014.QkLoginActivity");
 				capabilities.setCapability("appActivity","com.quicken.qm2014.QkLoginActivity");
-				capabilities.setCapability("fullReset","true");*/
+				capabilities.setCapability("fullReset","true");
 
 
 
-				//to run on sauce labs 
+	/*			//to run on sauce labs 
 												
 				capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 				capabilities.setCapability("appiumVersion", "1.4.16");
@@ -155,7 +155,7 @@ public class BaseTest {
 				capabilities.setCapability("name", "Android_Test");
 				capabilities.setCapability("build", "build-4.1.32");
 				capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
-				capabilities.setCapability("passed","true");
+				capabilities.setCapability("passed","true");*/
 
 				 
 
