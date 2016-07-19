@@ -122,7 +122,7 @@ public class BaseTest {
 
 				DesiredCapabilities capabilities = new DesiredCapabilities();
 
-				//to run on local
+			/*	//to run on local
 
 				File app=new File("/Users/vs/Downloads/Quicken32.apk");
 				capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
@@ -135,11 +135,11 @@ public class BaseTest {
 				capabilities.setCapability("appPackage","com.quicken.qm2014");//added by ashwini
 				//	capabilities.setCapability("app-wait-activity","com.intuit.qm2014.QkLoginActivity");
 				capabilities.setCapability("appActivity","com.quicken.qm2014.QkLoginActivity");
-				capabilities.setCapability("fullReset","true");
+				capabilities.setCapability("fullReset","true");*/
 
 
 
-	/*			//to run on sauce labs 
+				//to run on sauce labs 
 												
 				capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 				capabilities.setCapability("appiumVersion", "1.4.16");
@@ -155,7 +155,7 @@ public class BaseTest {
 				capabilities.setCapability("name", "Android_Test");
 				capabilities.setCapability("build", "build-4.1.32");
 				capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
-				capabilities.setCapability("passed","true");*/
+				capabilities.setCapability("passed","true");
 
 				 
 
