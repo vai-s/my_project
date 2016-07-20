@@ -24,7 +24,7 @@ public class SyncTest extends BaseTest{
 				
 		try{
 			
-			loginPage().loginWithValidCredentialsForAndroidQKN2("mb1_iamtestpass@mailinator.com", "Testing@01");
+			loginPage().loginWithValidCredentialsForAndroidQKN2("silk_iamtestpass@mailinator.com", "Intuit!1");
 			Thread.sleep(TestConstants.MINSLEEPTIME);
 			overviewPage().CheckAnypopus();
 			Thread.sleep(TestConstants.MINSLEEPTIME);
