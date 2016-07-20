@@ -560,6 +560,14 @@ public class OverviewPage extends Page {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pageprops.getProperty("OVERVIEWPAGE_REFRESHED"))));
 		QuickenLogger.log(Level.INFO, "OverviewPage Is fully refreshed");
 	}
+	
+	//Added by vaishnavi
+	public void clickRefresh(){
+		pageDriver.findElement(By.xpath(pageprops.getProperty("OVERVIEWPAGE_REFRESHED"))).click();
+		WebDriverWait wait = new WebDriverWait(pageDriver, 120);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pageprops.getProperty("OVERVIEWPAGE_REFRESHED"))));
+
+	}
 
 
 }

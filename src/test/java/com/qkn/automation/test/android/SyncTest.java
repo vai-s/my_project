@@ -28,6 +28,7 @@ public class SyncTest extends BaseTest{
 			Thread.sleep(TestConstants.MINSLEEPTIME);
 			overviewPage().CheckAnypopus();
 			Thread.sleep(TestConstants.MINSLEEPTIME);
+			overviewPage().clickRefresh();
 			Thread.sleep(5000);
 			overviewPage().navigateToAccounts();
 			Thread.sleep(5000);
@@ -55,6 +56,7 @@ public class SyncTest extends BaseTest{
 //			Thread.sleep(TestConstants.MINSLEEPTIME);
 //			overviewPage().CheckAnypopus();
 //			Thread.sleep(TestConstants.MINSLEEPTIME);
+//			overviewPage().clickRefresh();	
 //			Thread.sleep(5000);
 //			overviewPage().navigateToAccounts();
 //			Thread.sleep(5000);
@@ -82,6 +84,7 @@ public class SyncTest extends BaseTest{
 //			Thread.sleep(TestConstants.MINSLEEPTIME);
 //			overviewPage().CheckAnypopus();
 //			Thread.sleep(TestConstants.MINSLEEPTIME);
+//			overviewPage().clickRefresh();
 //			Thread.sleep(5000);
 //			overviewPage().navigateToAccounts();
 //			Thread.sleep(5000);
@@ -109,6 +112,7 @@ public class SyncTest extends BaseTest{
 //			Thread.sleep(TestConstants.MINSLEEPTIME);
 //			overviewPage().CheckAnypopus();
 //			Thread.sleep(TestConstants.MINSLEEPTIME);
+//			overviewPage().clickRefresh();
 //			Thread.sleep(5000);
 //			overviewPage().navigateToAccounts();
 //			Thread.sleep(5000);
@@ -141,6 +145,7 @@ public class SyncTest extends BaseTest{
 //			Thread.sleep(TestConstants.MINSLEEPTIME);
 //			overviewPage().CheckAnypopus();
 //			Thread.sleep(TestConstants.MINSLEEPTIME);
+//			overviewPage().clickRefresh();
 //			Thread.sleep(5000);
 //			overviewPage().navigateToAccounts();
 //			Thread.sleep(5000);

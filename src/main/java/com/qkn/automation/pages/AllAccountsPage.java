@@ -72,13 +72,13 @@ public class AllAccountsPage extends Page{
 			
 		{
 			 pageDriver.findElement(By.xpath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")).click();
-			 pageDriver.findElement(By.xpath(pageprops.getProperty("ALL_ACCOUNTS_FIRST_TXN"))).click();
+			 pageDriver.findElement(By.xpath(pageprops.getProperty("ACTIVE_FRST_TXN"))).click();
 		}
 		else
 			{
 		  Thread.sleep(3000);
 	     // FindElementByTagNameAndClick(pageDriver, pageprops.getProperty("CD_FIRST_TXN"));
-		  pageDriver.findElement(By.xpath(pageprops.getProperty("ALL_ACCOUNTS_FIRST_TXN"))).click();
+		  pageDriver.findElement(By.xpath(pageprops.getProperty("ACTIVE_FRST_TXN"))).click();
 		}
 	}
 	
