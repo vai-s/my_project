@@ -140,7 +140,7 @@ public class TransactionDetailPage extends Page{
 //		findElementByXpathAndClick(pageDriver, pageprops.getProperty("ALL_ACCOUNTS_FIRST_TXN"));
 		
 		String qd_tag="";
-		InputStream reader = new FileInputStream("file://VM-VS/share/SyncTransaction.txt");
+		InputStream reader = new FileInputStream("//VM-VS/share/SyncTransaction.txt");
 		Properties properties = new Properties();
 		properties.load(reader);
 		qd_tag = properties.getProperty("Tags");
