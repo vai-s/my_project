@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qkn.automation.test.android.LoginTest">
+      <class name="com.qkn.automation.test.android.SyncTest">
         <methods>
           <include name="testLoginWithValidCredentails"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.qkn.automation.test.android.LoginTest -->
+      </class> <!-- com.qkn.automation.test.android.SyncTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -4,7 +4,7 @@
   
   <test name="LoginTest" >
     <classes>
-       <class name="com.qkn.automation.test.android.LoginTest" />
+       <class name="com.qkn.automation.test.android.SyncTest" />
     </classes>
   </test>
   

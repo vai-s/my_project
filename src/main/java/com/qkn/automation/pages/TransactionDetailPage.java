@@ -90,9 +90,10 @@ public class TransactionDetailPage extends Page{
 		pageDriver.findElement(By.xpath(pageprops.getProperty("VACATION"))).click();
 		pageDriver.findElement(By.name(pageprops.getProperty("NOTE_EDIT_DONE"))).click();
 	}
-
+	//added by vaishnavi
 	public void updateDate(){
-
+		String date=pageDriver.findElement(By.xpath(pageprops.getProperty("TXN_DETAIL_DATE"))).getText().trim();
+		String[] date_split=date.split(" ");
 
 
 	}
@@ -139,7 +140,7 @@ public class TransactionDetailPage extends Page{
 //		findElementByXpathAndClick(pageDriver, pageprops.getProperty("ALL_ACCOUNTS_FIRST_TXN"));
 		
 		String qd_tag="";
-		InputStream reader = new FileInputStream("/Users/vs/Documents/test.properties");
+		InputStream reader = new FileInputStream("file://192.168.3.47/SyncTransaction.txt");
 		Properties properties = new Properties();
 		properties.load(reader);
 		qd_tag = properties.getProperty("Tags");

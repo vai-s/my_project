@@ -122,7 +122,7 @@ public class BaseTest {
 
 				DesiredCapabilities capabilities = new DesiredCapabilities();
 
-				//to run on local
+	/*		//to run on local
 
 				File app=new File("/Users/vs/Downloads/Quicken32.apk");
 				capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
@@ -135,11 +135,9 @@ public class BaseTest {
 				capabilities.setCapability("appPackage","com.quicken.qm2014");//added by ashwini
 				//	capabilities.setCapability("app-wait-activity","com.intuit.qm2014.QkLoginActivity");
 				capabilities.setCapability("appActivity","com.quicken.qm2014.QkLoginActivity");
-				capabilities.setCapability("fullReset","true");
+				capabilities.setCapability("fullReset","true");*/
 
-
-
-	/*			//to run on sauce labs 
+			//to run on sauce labs 
 												
 				capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 				capabilities.setCapability("appiumVersion", "1.4.16");
@@ -155,7 +153,7 @@ public class BaseTest {
 				capabilities.setCapability("name", "Android_Test");
 				capabilities.setCapability("build", "build-4.1.32");
 				capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
-				capabilities.setCapability("passed","true");*/
+				capabilities.setCapability("passed","true");
 
 				 
 
@@ -198,7 +196,7 @@ public class BaseTest {
 				//  eyes = new Eyes();
 				//	eyes.setApiKey("H983jIA72VeNutvJHtUQ67FL1059GIOtyNOBEGOoVQ106107z4110");
 
-				/*
+				
 				//To Run on SauceLabs
 				DesiredCapabilities capabilities = new DesiredCapabilities();
 				capabilities.setCapability("appiumVersion", "1.4.16");
@@ -219,10 +217,10 @@ public class BaseTest {
 				capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
 				capabilities.setCapability("passed","true");
 				//capabilities.setCapability("idleTimeout", "360");
-				//capabilities.setCapability("command-timeout", "600");
+				//capabilities.setCapability("command-timeout", "600"); 
 
-				 */
-				//To Run on local machine
+				 
+	/*			//To Run on local machine
 				DesiredCapabilities capabilities = new DesiredCapabilities();
 				capabilities.setCapability("appiumVersion", "1.4.16");
 				capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
@@ -241,7 +239,7 @@ public class BaseTest {
 				//	capabilities.setCapability("autoAcceptAlerts", true);
 				//capabilities.setCapability("noReset",true);
 				File app=new File("/Users/balaji/Documents/NewQuicken/Quicken.app");
-				capabilities.setCapability("app",app.getAbsolutePath());
+				capabilities.setCapability("app",app.getAbsolutePath()); */
 
 
 				//Jenkins configuration
