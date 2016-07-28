@@ -1,6 +1,7 @@
 package com.qkn.automation.pages;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.DateFormat;
@@ -288,6 +289,70 @@ public class TransactionPage extends Page{
 
 		}
 
+	}
+	//added by Vaishnavi
+	//adds a transaction for an existing account on QM
+	public void addTransaction() throws IOException, InterruptedException {
+		// TODO Auto-generated method stub
+//		WebDriverWait wait = new WebDriverWait(pageDriver, 120);
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By
+//				.xpath(pageprops.getProperty("TXN_PAGE_REFRESHED"))));
+		pageDriver.findElement(By.xpath(pageprops.getProperty("ACCOUNT_SETTING"))).click();
+		pageDriver.findElement(By.xpath(pageprops.getProperty("ADD_TXN"))).click();
+	
+		InputStream reader = new FileInputStream("/Users/vs/QMtxn.txt");
+		Properties properties = new Properties();
+		properties.load(reader);
+		String amount=properties.getProperty("Amount");
+		String payee=properties.getProperty("Payee");
+		String type=properties.getProperty("Type");
+		String pay_type=properties.getProperty("Payment type");
+		String tag=properties.getProperty("Tag");
+		String cat=properties.getProperty("Category");
+		String mem=properties.getProperty("Memo");
+		
+		if(amount.length()<4){
+			amount=amount.concat("00");
+		}
+		//adding the amount via the number pad
+		for(int i=0;i<amount.length();i++){
+			clickOnNumbersInNumberPad(String.valueOf(amount.charAt(i)));
+		}
+		//adding the payee name
+		pageDriver.findElement(By.xpath(pageprops.getProperty("CHOOSE_MERCHANT"))).click();
+		Thread.sleep(TestConstants.NOMINALSLEEPTIME);
+		pageDriver.findElement(By.id("com.quicken.qm2014:id/merchant_name")).sendKeys(payee);
+		pageDriver.findElement(By.xpath(pageprops.getProperty("CHOOSE_ENTEREDPAYEE"))).click();
+		//clickOnNumbersInNumberPad("Next");
+		pageDriver.findElement(By.xpath(pageprops.getProperty("NEXTBUTTON"))).click();
+		
+		//adding details for the transaction
+		
+		//add category
+		pageDriver.findElement(By.xpath(pageprops.getProperty("CATEGORY"))).click();		
+		pageDriver.findElement(By.xpath(pageprops.getProperty("ENTER_CAT"))).sendKeys(cat);
+		//Click on state 
+		pageDriver.findElement(By.xpath(pageprops.getProperty("ADD_CAT"))).click();
+		Thread.sleep(15000);
+		
+		//add tag
+		pageDriver.findElement(By.xpath(pageprops.getProperty("ADD_TAG"))).click();;
+		if(tag.equals("Reimbursable")){
+		pageDriver.findElement(By.xpath(pageprops.getProperty("ADD_TAG_R"))).click();;
+		pageDriver.findElement(By.xpath(pageprops.getProperty("TAG_DONE"))).click();
+		}
+		
+		Thread.sleep(3000);
+		
+		//adding memo
+		pageDriver.findElement(By.xpath(pageprops.getProperty("MEMO"))).click();
+		pageDriver.findElement(By.xpath(pageprops.getProperty("ENTER_MEM"))).sendKeys(mem);
+		pageDriver.findElement(By.xpath(pageprops.getProperty("MEM_DONE"))).click();
+		
+		//saving
+		pageDriver.findElement(By.xpath(pageprops.getProperty("TXN_SAVE"))).click();
+		
+		
 	}
 
 	}

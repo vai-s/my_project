@@ -126,4 +126,14 @@ public class AccountsPage extends Page{
 		return onlinevalue;
 	}
 
+	//Added by vaishnavi
+	public void navigateToFirstAccount() {
+		//WebDriverWait wait =  new WebDriverWait(pageDriver, 180);
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(pageprops.getProperty("FIRST_ACCOUNT"))));
+		pageDriver.findElement(By.xpath(pageprops.getProperty("FIRST_ACCOUNT"))).click();
+		pageDriver.findElement(By.xpath(pageprops.getProperty("TOGGLE_BALANCE"))).click();
+		
+	}
+	
+
 }

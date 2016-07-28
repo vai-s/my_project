@@ -140,7 +140,8 @@ public class TransactionDetailPage extends Page{
 //		findElementByXpathAndClick(pageDriver, pageprops.getProperty("ALL_ACCOUNTS_FIRST_TXN"));
 		
 		String qd_tag="";
-		InputStream reader = new FileInputStream("//VM-VS/share/SyncTransaction.txt");
+		InputStream reader = new FileInputStream("//VM-VS/share/SyncTransaction.txt"); //to run on sauce labs
+		//InputStream reader = new FileInputStream("/Users/vs/Documents/test.properties");
 		Properties properties = new Properties();
 		properties.load(reader);
 		qd_tag = properties.getProperty("Tags");
@@ -154,6 +155,7 @@ public class TransactionDetailPage extends Page{
 	public void compareCategory() throws IOException {
 		// TODO Auto-generated method stub
 		String qd_cat="";
+		//InputStream reader = new FileInputStream("//VM-VS/share/SyncTransaction.txt");	//to run on sauce labs
 		InputStream reader = new FileInputStream("/Users/vs/Documents/test.properties");
 		Properties properties = new Properties();
 		properties.load(reader);
@@ -171,6 +173,7 @@ public class TransactionDetailPage extends Page{
 	public void compareMemo() throws IOException {
 		// TODO Auto-generated method stub
 		String qd_mem="";
+		//InputStream reader = new FileInputStream("//VM-VS/share/SyncTransaction.txt");	//to run on sauce labs
 		InputStream reader = new FileInputStream("/Users/vs/Documents/test.properties");
 		Properties properties = new Properties();
 		properties.load(reader);
@@ -187,6 +190,7 @@ public class TransactionDetailPage extends Page{
 	public void comparePayee() throws IOException {
 	// TODO Auto-generated method stub
 	String qd_payee="";
+	//InputStream reader = new FileInputStream("//VM-VS/share/SyncTransaction.txt");	//to run on sauce labs
 	InputStream reader = new FileInputStream("/Users/vs/Documents/test.properties");
 	Properties properties = new Properties();
 	properties.load(reader);
@@ -202,6 +206,7 @@ public class TransactionDetailPage extends Page{
 	public void compareAccount() throws IOException {
 	// TODO Auto-generated method stub
 	String qd_acc="";
+	//InputStream reader = new FileInputStream("//VM-VS/share/SyncTransaction.txt");	//to run on sauce labs
 	InputStream reader = new FileInputStream("/Users/vs/Documents/test.properties");
 	Properties properties = new Properties();
 	properties.load(reader);
@@ -217,6 +222,7 @@ public class TransactionDetailPage extends Page{
 	public void compareAmount() throws IOException {
 		// TODO Auto-generated method stub
 		String qd_amt="";
+		//InputStream reader = new FileInputStream("//VM-VS/share/SyncTransaction.txt");	//to run on sauce labs
 		InputStream reader = new FileInputStream("/Users/vs/Documents/test.properties");
 		Properties properties = new Properties();
 		properties.load(reader);
